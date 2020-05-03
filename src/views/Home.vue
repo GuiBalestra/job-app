@@ -1,83 +1,22 @@
 <template>
   <b-container>
     <b-row align-v="center">
-      <b-col md="3">
-        <b-card
-          title="This is a card"
-          img-src="https://picsum.photos/600/300/?image=25"
-          img-alt="Job-info"
-          img-top
-          tag="article"
-          style="max-width: 20rem"
-          class="mb-2"
-        >
-          <b-card-text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
-            minus.
-          </b-card-text>
-          <b-button variant="primary">Apply</b-button>
-        </b-card>
-      </b-col>
-      <b-col md="3">
-        <b-card
-          title="This is a card"
-          img-src="https://picsum.photos/600/300/?image=25"
-          img-alt="Job-info"
-          img-top
-          tag="article"
-          style="max-width: 20rem"
-          class="mb-2"
-        >
-          <b-card-text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
-            minus.
-          </b-card-text>
-          <b-button variant="primary">Apply</b-button>
-        </b-card>
-      </b-col>
-      <b-col md="3">
-        <b-card
-          title="This is a card"
-          img-src="https://picsum.photos/600/300/?image=25"
-          img-alt="Job-info"
-          img-top
-          tag="article"
-          style="max-width: 20rem"
-          class="mb-2"
-        >
-          <b-card-text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
-            minus.
-          </b-card-text>
-          <b-button variant="primary">Apply</b-button>
-        </b-card>
-      </b-col>
-      <b-col md="3">
-        <b-card
-          title="This is a card"
-          img-src="https://picsum.photos/600/300/?image=25"
-          img-alt="Job-info"
-          img-top
-          tag="article"
-          style="max-width: 20rem"
-          class="mb-2"
-        >
-          <b-card-text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
-            minus.
-          </b-card-text>
-          <b-button variant="primary">Apply</b-button>
-        </b-card>
-      </b-col>
+      <JobCard />
+      <JobCard />
+      <JobCard />
+      <JobCard />
     </b-row>
   </b-container>
 </template>
 
 <script>
 // @ is an alias to /src
+import JobCard from "@/components/JobCard.vue";
 
 export default {
   name: "Home",
-  components: {}
+  components: {
+    JobCard
+  }
 };
 </script>
