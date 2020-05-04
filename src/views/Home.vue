@@ -1,7 +1,12 @@
 <template>
   <b-container>
     <b-row align-v="center">
-      <JobCard v-for="job in displayJobs" :key="job.id" :name="job.name" />
+      <JobCard
+        v-for="job in displayJobs"
+        :key="job.id"
+        :name="job.name"
+        :id="job.id"
+      />
     </b-row>
     <b-pagination
       v-model="currentPage"

@@ -14,7 +14,16 @@
         <b-card-text>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, minus.
         </b-card-text>
-        <b-button variant="primary">Apply</b-button>
+        <b-button
+          v-b-modal="modalId"
+          variant="primary"
+          v-b-tooltip.hover
+          title="Apply Here"
+          >Apply</b-button
+        >
+        <b-modal :id="modalId" title="Apply here info">
+          <p class="my-4">Hello from modal</p>
+        </b-modal>
       </b-card>
     </b-col>
   </div>
@@ -23,7 +32,13 @@
 <script>
 export default {
   props: {
-    name: String
+    name: String,
+    id: Number
+  },
+  computed: {
+    modalId() {
+      return `modal-${this.id}`;
+    }
   }
 };
 </script>
